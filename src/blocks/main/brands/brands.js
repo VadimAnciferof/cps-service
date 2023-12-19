@@ -1,6 +1,6 @@
 // Создание элементов "бренд"
 const name_brands = ["Acer", "Bosch", "Lenovo", "Samsung", "Sony", "Viewsonic", "Samsung", "Sony", "Viewsonic"]
-const src_link = "../../../blocks/main/brands/images/"; // ../../../blocks/main/brands/images/
+const src_link = "./blocks/main/brands/images/"; // ../../../blocks/main/brands/images/
 const link = 
     `<a href="#" class="brand-button">
         <svg width="40" height="40" viewBox="0 0 40 40" >
