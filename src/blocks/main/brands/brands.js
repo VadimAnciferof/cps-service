@@ -1,6 +1,6 @@
 // Создание элементов "бренд"
 const name_brands = ["Acer", "Bosch", "Lenovo", "Samsung", "Sony", "Viewsonic", "Samsung", "Sony", "Viewsonic"]
-const src_link = "../blocks/main/brands/images/"; // ../../../blocks/main/brands/images/
+const src_link = "./blocks/main/brands/images/"; // ./blocks/main/brands/images/Acer.png
 const link = 
     `<a href="#" class="brand-button">
         <svg width="40" height="40" viewBox="0 0 40 40" >
@@ -25,7 +25,7 @@ function create_brand(count){
 
     const logo = document.createElement("img")
     brand.classList.add("brand-logo");
-    logo.src = src_link + name_brands[count] + ".png";
+    logo.src = "./blocks/main/brands/images/Acer.png"; //src_link + name_brands[count] + ".png";
     div.appendChild(logo);
 
     brand.appendChild(div);
