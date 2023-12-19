@@ -20,14 +20,20 @@ if (window.innerWidth > 1365){
     page_title.appendChild(main_but);
 }
 
+let check = false
 window.addEventListener ("resize", () => {
     if (window.innerWidth > 1365){
         repair.prepend(span_repair);
         checkstatus.prepend(span_checkstatus);
         page_title.appendChild(main_but);
+        check = true;
     } else {
-        repair.removeChild(span_repair);
-        checkstatus.removeChild(span_checkstatus);
+        if (check == true){
+            repair.removeChild(span_repair);
+            checkstatus.removeChild(span_checkstatus);
+            check = false;
+        }
+
         header_right.appendChild(main_but);
     }
 })

@@ -21,6 +21,8 @@ btn_burger.addEventListener("click", function(event){
     setTimeout(() => {
         footer_up.prepend(add_buttons);
     }, 200);
+
+    document.body.style.overflow = "hidden";
     
 })
 
@@ -35,6 +37,8 @@ btn_crossburger.addEventListener("click", function(event){
             header_right.prepend(add_buttons);
         }, 200);
     }
+
+    document.body.style.overflow = "";
 })
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
@@ -71,4 +75,6 @@ modal_back.addEventListener("click", function(event){
             header_right.prepend(add_buttons);
         }, 200);
     }
+
+    document.body.style.overflow = "";
 })

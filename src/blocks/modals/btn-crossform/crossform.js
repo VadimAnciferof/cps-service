@@ -14,9 +14,15 @@ const form_title = modal_form.querySelector(".form-title__text");
 const width = window.innerWidth;
 modal_back.style.right = "-" + width + "px";
 //События CHAT// // // // // // // // // // //
+
+window.addEventListener("resize", ()=>{
+
+    modal_back.style.right = "-" + window.innerWidth + "px";
+})
+
 btn_chat.addEventListener("click", function(event){
     event.preventDefault();
-
+    
     modal_back.style.right = 0;
 
     modal_wind.style.right = 0;
@@ -29,14 +35,18 @@ btn_chat.addEventListener("click", function(event){
 
     })
 
+    document.body.style.overflow = "hidden";
+
 })
 
 btn_crossform.addEventListener("click", function(event){
     event.preventDefault();
 
-    modal_back.style.right = "-" + width + "px";
+    modal_back.style.right = "-" + window.innerWidth + "px";
 
     modal_wind.style.right = "-700px";
+
+    document.body.style.overflow = ""
 
 })
     
@@ -55,14 +65,21 @@ btn_call.addEventListener("click", function(event){
         }
 
     })
+
+    document.body.style.overflow = "hidden";
 })
 // Заблюренная часть // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 modal_back.addEventListener("click", function(event){
     event.preventDefault();
 
-    modal_back.style.right = "-" + width + "px";
+    modal_back.style.right = "-" + window.innerWidth + "px";
 
     modal_wind.style.right = "-700px";
 
+    document.body.style.overflow = ""
+
 })
+
+// document.body.style.overflow = "hidden"; выключает скролл
+// document.body.style.overflow = "";       включает скролл
