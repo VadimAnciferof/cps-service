@@ -57,3 +57,18 @@ if (width > 1365){
 } else if ((width < 1366) && (width > 767)) {
     header_right.prepend(add_buttons);
 }
+
+// Заблюренная часть // // // // // // // // // // // // // // // // // // // // // // // // // // //
+
+modal_back.addEventListener("click", function(event){
+    event.preventDefault();
+
+    modal_back.style.left = "-1500px";
+    modal_wind.style.left = "-500px";
+
+    if (window.innerWidth >= 768){
+        setTimeout(() => {
+            header_right.prepend(add_buttons);
+        }, 200);
+    }
+})

@@ -1,4 +1,4 @@
-import {price_keys, price_class, names_column} from "./_prices_const";
+import {price_keys, price_class, names_column} from "./prices_const";
 // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 const price_list = document.querySelector(".price-list");

@@ -56,3 +56,13 @@ btn_call.addEventListener("click", function(event){
 
     })
 })
+// Заблюренная часть // // // // // // // // // // // // // // // // // // // // // // // // // // //
+
+modal_back.addEventListener("click", function(event){
+    event.preventDefault();
+
+    modal_back.style.right = "-" + width + "px";
+
+    modal_wind.style.right = "-700px";
+
+})

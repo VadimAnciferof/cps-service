@@ -1,5 +1,5 @@
-import {text_sec, block_sec, tech_names, brands_names, about_names} from "./_btn-more_const";
-import {createBtnMore} from "./_btn-more_func";
+import {text_sec, block_sec, tech_names, brands_names, about_names} from "./btn-more_const";
+import {createBtnMore} from "./btn-more_func";
 
 createBtnMore(text_sec, about_names, "btn-more-2");
 
