@@ -5,7 +5,7 @@ const price_list = document.querySelector(".price-list");
 
 const btn_icon = 
     `<a href="#"><svg width="40" height="40" viewBox="0 0 40 40" class="btn-submit__icon">
-        <use xlink:href="./images/sprite.svg##goside">
+        <use xlink:href="./images/sprite.svg#goside">
     </svg></a>`
 
 for (let i = 0; i < price_keys.length; i++){
