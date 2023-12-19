@@ -25,7 +25,7 @@ function create_brand(count){
 
     const logo = document.createElement("img")
     brand.classList.add("brand-logo");
-    logo.src = "./blocks/main/brands/images/acerr.png"; //src_link + name_brands[count] + ".png";
+    logo.src = "./blocks/main/brands/images/bitmap.jpg"; //src_link + name_brands[count] + ".png";
     div.appendChild(logo);
 
     brand.appendChild(div);
