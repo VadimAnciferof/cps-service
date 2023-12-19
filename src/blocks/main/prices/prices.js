@@ -4,9 +4,9 @@ import {price_keys, price_class, names_column} from "./prices_const";
 const price_list = document.querySelector(".price-list");
 
 const btn_icon = 
-    `<svg width="40" height="40" viewBox="0 0 40 40" class="btn-submit__icon">
+    `<a href="#"><svg width="40" height="40" viewBox="0 0 40 40" class="btn-submit__icon">
         <use xlink:href="./blocks/main/btn-submit/goside.svg#goside">
-    </svg>`
+    </svg></a>`
 
 for (let i = 0; i < price_keys.length; i++){
     createPrice(Object.values(price_keys[i]), names_column); // Получаем объекты и создаем "Плашка/Цены" 
