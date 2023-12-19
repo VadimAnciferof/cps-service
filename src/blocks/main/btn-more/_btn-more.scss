@@ -1,0 +1,64 @@
+.btn-more-text{
+
+    margin-left: 16px;
+
+    @media (min-width: $screen-md){
+        margin-left: 24px;
+    }
+    @media (min-width: $screen-lg){
+        margin-left: 32px;  
+    }
+
+    transition: 500ms  ease;
+    &:hover{
+        opacity: 0.75;
+
+        &::before{
+            animation-duration: 0.4s;
+            animation-name: btnMore;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-direction: alternate;
+        }
+
+        .btn-more-checkbox:checked + &:before{
+            animation-duration: 0.4s;
+            animation-name: btnLess;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-direction: alternate;
+        }
+
+    }
+
+    &::before{
+        content: url("./blocks/main/btn-more/_btn-more-icon.svg");
+        position: relative;
+        top: 5px;
+    }
+
+    .btn-more-checkbox:checked + &::before{
+        content: url("./blocks/main/btn-more/_btn-more-icon.svg");
+        display: inline-block;
+        position: relative;
+        bottom: 5px;
+        top: 0;
+        transform: scale(-1);
+    }
+
+    &--style{
+        color: $text-black;
+        font-size: $text-middle;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.2px;
+    }
+}
+
+.btn-more-checkbox{
+    &--hidden{
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+}

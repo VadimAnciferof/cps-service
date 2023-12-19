@@ -1,0 +1,57 @@
+.nav-on-site-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    transition: 500ms ease;
+    @media (min-width: $screen-md){
+        row-gap: 32px;
+    }
+}
+
+.text-nav{
+    display: flex;
+    align-items: center;
+
+    transition: 500ms ease;
+    &:hover{
+        color: $text-gray;
+    }
+
+    &::before{
+        transition: 250ms ease;
+        content: "";
+        position: absolute;
+        left: -8px;
+        
+        width: 8px;
+        height: 32px;
+        background-color: $el-aquamarin-main;
+        border-radius: 24px;
+        
+        opacity: 0;
+
+        @media (min-width: $screen-xl) {
+            width: 4px;
+            left: -4px;
+        }
+    }
+
+    &:hover::before{
+        content: "";
+        left: -4px;
+        opacity: 1;
+
+        @media (min-width: $screen-xl) {
+            left: 0;
+        }
+    }
+
+    &--style{
+        color: $text-black;
+        font-size: $text-middle;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -0.2px;
+    }
+}

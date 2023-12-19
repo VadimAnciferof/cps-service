@@ -1,0 +1,20 @@
+.swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: #DDD;
+}
+.swiper-pagination-bullet-active {
+    background: #B5B6BC;
+ }
+
+.swiper-paginationPrice, .swiper-paginationTech, .swiper-paginationBrands{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-md){
+        display: none;
+    }
+}   
+

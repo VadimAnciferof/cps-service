@@ -1,0 +1,10 @@
+.brand-button{
+    
+    &:hover{
+        animation-duration: 300ms;
+        animation-name: btnMoreSec;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        animation-direction: alternate;
+    }
+}

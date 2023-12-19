@@ -1,0 +1,22 @@
+.header-left{
+    column-gap: 16px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+    .logo::before{
+        content: "";
+        position: relative;
+
+        @extend %header-line;
+        margin-left: 0px;
+        margin-right: 16px;
+        
+        display: none;
+
+        @media(min-width: $screen-md){
+            display: inline-block;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@keyframes btnMore{
+    from {
+      top: 5px;
+    }
+  
+    to {
+      top: 7px;
+    }
+}
+
+@keyframes btnLess{
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: -2px;
+  }
+}
+
+@keyframes btnMoreSec{
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(-2px);
+  }
+
+}

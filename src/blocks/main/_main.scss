@@ -1,0 +1,25 @@
+@import "./swiper/swiper";
+
+@import "./title/title";
+@import "./nav-on-page/nav-on-page";
+
+@import "./btn-more/btn-more";
+@import "./btn-submit/btn-submit";
+@import "./btn-more-sec/btn-more-sec";
+
+@import "./about/about";
+@import "./sec-title/sec-title";
+@import "./brands/brands";
+@import "./types-tech/types-tech";
+@import "./prices/prices";
+
+
+.main{
+    min-height: 100%;
+
+    &--back{
+        background-color: $back-gray;
+    }
+
+    overflow: hidden;
+}

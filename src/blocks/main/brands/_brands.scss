@@ -1,0 +1,77 @@
+.brands-list{
+    display: flex;
+    margin-left: 16px;
+
+    @media (min-width: $screen-md) {
+        margin-left: 24px;
+
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 16px;
+
+        max-height: 160px;
+        overflow: hidden;
+
+        margin-bottom: 16px;
+    }
+
+    @media (min-width: $screen-lg) {
+        margin-left: 32px;
+        column-gap: 32px;
+    }
+
+    &__item{
+        display: flex;
+        padding: 16px;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 72px;
+        width: 240px;
+
+        @media (min-width: $screen-md) {
+            width: 224px;
+        }
+
+        @media (min-width: $screen-lg) {
+            width: 240px;
+        }
+
+        .brand-logo-conteiner{
+            display: flex;
+            align-items: center;
+            max-height: 32px;
+            max-width: 128px;
+
+            & use {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .brand-button{
+            display: flex;
+            align-items: center;
+        }
+
+        &:hover{
+            border: 1px solid $el-aquamarin-main;
+
+            .brand-button{
+                animation-duration: 300ms;
+                animation-name: btnMoreSec;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease;
+                animation-direction: alternate;
+            }
+        }
+
+        &--frame{
+            border-radius: 6px;
+            border: 1px solid #EAEAEA;
+            background: $back-white;   
+        }
+    }
+
+}
+

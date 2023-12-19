@@ -1,0 +1,79 @@
+.tech-list{
+    display: flex;
+    margin-left: 16px;
+
+    @media (min-width: $screen-md) {
+        margin-left: 24px;
+
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 16px;
+
+        max-height: 160px;
+        overflow: hidden;
+
+        margin-bottom: 16px;
+    }
+
+    @media (min-width: $screen-lg) {
+        column-gap: 32px;
+
+        margin-left: 32px;
+    }
+
+    &__item{
+        display: flex;
+        padding: 16px;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 160px;
+        width: 240px;
+
+        @media (min-width: $screen-md) {
+            width: 224px;
+        }
+
+        @media (min-width: $screen-lg) {
+            width: 240px;
+        }
+
+        .tech-name{
+            align-self: flex-start;
+
+            &--style{
+                color: $text-black;
+                font-size: $text-middle;
+                font-weight: 500;
+                line-height: 24px; /* 150% */
+                letter-spacing: -0.2px;
+            }
+        }
+
+        .brand-button{
+            display: flex;
+            align-items: center;
+            align-self: flex-end;
+        }
+
+        &:hover{
+            border: 1px solid $el-aquamarin-main;
+
+            .brand-button{
+                animation-duration: 300ms;
+                animation-name: btnMoreSec;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease;
+                animation-direction: alternate;
+            }
+        }
+        
+        &--frame{
+            border-radius: 6px;
+            border: 1px solid #EAEAEA;
+            background: $back-white;   
+        }
+    }
+
+}
+

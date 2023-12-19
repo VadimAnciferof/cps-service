@@ -1,0 +1,53 @@
+.price-down{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    margin-left: 16px;
+    margin-bottom: 40px;
+
+    max-width: 288px;
+
+    @media(min-width: $screen-md){
+        margin-left: 24px;
+        max-width: 425px;
+        
+        margin-top: 24px;
+    }
+
+    @media(min-width: $screen-lg){
+        margin-left: 32px;
+    }
+
+    &__text{
+
+        &--text-style{
+            font-size: $text-low;
+            font-weight: 400;
+            line-height: 20px; /* 142.857% */
+            letter-spacing: 0.2px;
+        }
+    }
+
+    &__link{
+
+        &::after{
+            content: url("./blocks/main/prices/price-down/_price-down-icon.svg");
+            position: relative;
+            top: 8px;
+        }
+
+        transition: 500ms ease;
+        &:hover{
+            opacity: 0.60;
+        }
+
+        &--text-style a{
+            color: $text-black;
+            font-size: $text-middle;
+            font-weight: 500;
+            line-height: 24px; /* 150% */
+            letter-spacing: -0.2px;
+        }
+    }
+}

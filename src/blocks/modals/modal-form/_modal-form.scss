@@ -1,0 +1,161 @@
+.modal-form{
+    position: fixed;
+    top: 0;
+
+    z-index: 2000;
+
+    &__overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+
+        right: -2000px;
+        transition: 950ms ease;
+
+        &--back{
+            background-color: $back-white;
+            opacity: 0.9605;
+        }
+    }
+
+    &__window{
+        position: fixed;
+        min-height: 100%;
+        width: 100%;
+
+        right: -700px;
+        transition: 950ms ease;
+
+        @media(min-width: $screen-sm){
+            width: 440px;
+        }
+
+        &--back{
+            background-color: $back-white;
+            box-shadow: 50px 0px 100px 5px black;
+        }
+    }
+
+    &__content{
+        width: 100%; 
+        padding-top: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        @media (min-width: $screen-md){
+            padding-top: 40px;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        .button-crossform{
+            position: relative;
+
+            @media(min-width: $screen-md){
+                position: absolute;
+                left: -64px;
+            }
+
+        }
+
+        &--back{
+            background-color: transparent;
+        }
+    }
+}
+
+.form-feedback{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    .forms{
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    .btn-submit{
+        align-self: flex-end;
+    }
+
+    .form-title{
+        position: relative;
+        left: -16px;
+
+        @media (min-width: $screen-md){
+            left: -32px;
+        }
+    }
+}
+
+.form{
+    width: 100%;
+    height: 48px;
+    padding-left: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    @media (min-width: $screen-md){
+        width: 376px;
+    }
+
+    &:focus{
+        border: 1px solid $el-aquamarin-main;
+    }
+
+    &--style{
+        border-radius: 8px;
+        border: 1px solid $back-lightgray;
+        background: transparent;
+    }
+
+    &--feedback{
+        height: 118px;
+    }
+
+    &--hidden{
+        display: none;
+    }
+}
+
+.form-title__text{
+    padding-left: 16px;
+    padding-top: 32px;
+    
+    @media (min-width: $screen-md){
+        padding-left: 32px;
+        padding-top: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+    }
+    
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        left: -2px;
+
+        width: 4px;
+        height: 40px;
+        background-color: $el-aquamarin-main;
+        border-radius: 2px;
+    }
+
+    &--style{
+        color: $text-black;
+        font-size: $text-main;
+        font-weight: 700;
+        line-height: 40px; /* 142.857% */
+        letter-spacing: -0.6px;
+    }
+}
+
+.form-link__text{
+    
+    &--style{
+        color: $pink;
+    }
+
+}

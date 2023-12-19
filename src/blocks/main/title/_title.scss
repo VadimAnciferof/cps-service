@@ -1,0 +1,42 @@
+.page-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 32px;
+}
+
+.page-title__text{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+
+    @media (min-width: $screen-md){
+        padding-bottom: 32px;
+        padding-left: 24px;
+    }
+
+    @media (min-width: $screen-lg) {
+        padding-bottom: 8px;
+        padding-left: 32px;
+    }
+    
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        left: -2px;
+
+        width: 4px;
+        height: 40px;
+        background-color: $el-aquamarin-main;
+        border-radius: 2px;
+    }
+
+    &--style{
+        color: $text-black;
+        font-size: $text-main;
+        font-weight: 700;
+        line-height: 40px; /* 142.857% */
+        letter-spacing: -0.6px;
+    }
+}

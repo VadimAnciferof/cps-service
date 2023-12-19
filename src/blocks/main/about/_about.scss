@@ -1,0 +1,75 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 18px; /*Текст-Картинка*/
+
+    @media (min-width: $screen-md){
+        flex-direction: row;
+        row-gap: 0px;
+        column-gap: 48px;
+
+        padding-right: 24px;
+    }
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2px; /*Текс-Кнопка*/
+
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px; /*Абзац-Абзац*/
+        width:100%;
+        max-height: 90px;
+        overflow: hidden;
+
+        padding-right: 16px;
+        padding-left: 16px;
+
+        @media(min-width: $screen-md){
+            width:312px;
+            max-height: 160px;
+            padding-left: 24px;
+        }
+    
+        @media(min-width: $screen-lg){
+            width:490px;
+            max-height: none;
+            padding-left: 32px;
+        }
+
+        &--style{
+            color: $text-black;
+            font-size: $text-low;
+            font-weight: 400;
+            line-height: 18px; /* 128.571% */
+            letter-spacing: 0.2px;
+        }
+    }
+
+    &__image-wrapper{
+        width: 100%;
+    }
+
+    &__img{
+        width: 100%;
+        height: auto;
+
+        @media (min-width: $screen-md){
+            min-width: 360px;
+            &--style{
+                border-radius: 10px;
+            }
+        }
+
+        @media (min-width: $screen-lg){
+            width: auto;
+            height: 307px;
+
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import "./button/button";
+@import "./header-left/header-left";
+@import "./header-right/header-right";
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 88px;
+
+    padding: 24px 16px;
+
+    @media (min-width: $screen-sm){
+        padding: 24px 24px;
+    }
+
+    @media(min-width: $screen-xl){
+        &--hidden{
+            display: none;
+        }
+    }
+
+    &-left{
+        display: flex;
+        align-items: center;
+    }
+
+    &-right{
+        display: flex;
+        align-items: center;
+        max-height: 100%;
+    }
+
+    &--back{
+        background-color: $back-white;
+        border-bottom: 1px solid $el-aquamarin;
+    }
+}
+

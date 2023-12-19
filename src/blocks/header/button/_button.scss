@@ -1,0 +1,9 @@
+.button{
+    width: 40px;
+    height: 40px;
+
+    transition: 500ms ease;
+    &:hover{
+        filter:saturate(0.75);
+    }
+}

@@ -1,0 +1,31 @@
+.main-buttons{
+    
+    @media (min-width: $screen-xl){
+        display: flex;
+        align-items: center;
+        margin-top: 24px;
+        margin-bottom: 8px;
+    }
+
+}
+
+.repair-block, .checkstatus-block{
+    
+    @media (min-width: $screen-xl){
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+    }
+
+}
+
+.text-main-button{
+    &--style{
+        color: $text-black;
+        text-align: right;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.2px;
+    }
+}
