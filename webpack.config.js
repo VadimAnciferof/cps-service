@@ -40,7 +40,10 @@ module.exports = {
     output: {
         filename: filename('js'),
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'images/[name][ext][query]',
+        assetModuleFilename: pathData => {
+            const filepath = path.dirname(pathData.filename).split('/').slice(1).join('/');
+            return `${filepath}/[name][ext]`;
+        },// assetModuleFilename: 'images/[name][ext][query]',
         clean: true
     },
     resolve: {
