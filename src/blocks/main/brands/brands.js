@@ -24,7 +24,7 @@ function create_brand(count){
     div.classList.add("brand-logo-conteiner");
 
     const logo = document.createElement("img")
-    brand.classList.add("brand-logo");
+    logo.classList.add("brand-logo");
     logo.src = "./blocks/main/brands/images/bitmap.jpg"; //src_link + name_brands[count] + ".png";
     div.appendChild(logo);
 
