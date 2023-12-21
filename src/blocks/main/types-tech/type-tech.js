@@ -1,4 +1,4 @@
-// Создание элементов "бренд"
+// Создание элементов "Техника"
 const tech_names = ["Ремонт ноутбуков", "Ремонт планшетов", "Ремонт телефонов", "Ремонт компьютеров", "Ремонт телевизоров", "Ремонт бытовой техники", "Ремонт телефонов", "Ремонт компьютеров", "Ремонт телевизоров", ];
 const link = 
     `<a href="#" class="brand-button">
@@ -7,7 +7,7 @@ const link =
         </svg>
     </a>`;
 // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-const types_tech = document.querySelector(".tech-list"); // Бренды
+const types_tech = document.querySelector(".tech-list"); // Техника
 
 for(let j = 0; j < tech_names.length; j++){
     create_tech(j);

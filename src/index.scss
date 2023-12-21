@@ -6,9 +6,9 @@
 @import "./extend/extend";
 @import "./animations/animations";
 
-@import "./blocks/header/header";
-@import "./blocks/main/main";
-@import "./blocks/footer/footer";
+@import "./components/components.scss"; /*Кнопки*/
+@import "./swiper/swiper.scss";
+@import "./modals/modal.scss";
 
-@import "./blocks/modals/modal";
+@import "./blocks/blocks.scss"; /*Header Main Footer*/
 

@@ -1,4 +1,34 @@
-import {price_keys, price_class, names_column} from "./prices_const";
+// Создание списка цен // // // // // // // // // // // // // // // // // // // // // // // // //
+
+// // // // // // // // // // // // // // // // // // // // // // // // // //
+const price_keys = [{
+    type: "Диагностика",
+    price: "Бесплатно",
+    time: "30 мин"
+},
+{
+    type: "Замена дисплея",
+    price: "1000 ₽",
+    time: "30-120 мин"
+},
+{
+    type: "Замена полифонического динамика",
+    price: "1000 ₽",
+    time: "30-120 мин"
+},
+{
+    type: "Тестирование с выдачей технического заключения",
+    price: "1000 ₽",
+    time: "30-120 мин"
+},
+{
+    type: "Замена програмного обеспечения",
+    price: "1000 ₽",
+    time: "30-120 мин"
+}]
+
+const price_class = ["text-type", "text-price", "text-time"];
+const names_column = ["Ремонтные услуги", "Цена", "Срок"];
 // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 const price_list = document.querySelector(".price-list");
@@ -16,8 +46,9 @@ for (let i = 0; i < price_keys.length; i++){
 function createPrice(array, names_column){
     const li = document.createElement("li");
     li.classList.add("price-list__item", "price-list__item--frame", "price-list__item--back", "swiper-slide");
-
-    for (let i = 0; i < 3; i++){
+    
+    const count_title_price = 3 // Кол-во заголовков в плашке "Цены"
+    for (let i = 0; i < count_title_price; i++){ // Заголовки пунктов для Mobile
         const span = document.createElement("span");
         span.classList.add("price-text", "price-text--style", price_class[i]);
 

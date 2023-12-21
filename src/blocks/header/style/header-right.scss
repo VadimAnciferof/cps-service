@@ -1,3 +1,34 @@
+.header-right{
+
+    &__item{
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+    }
+
+    .main-buttons::before{
+        content: "";
+        position: relative;
+
+        @extend %header-line;
+    }
+}
+
+.hidden{
+    display: none;
+
+    @media(min-width: $screen-md){
+        display: block;
+    }
+}
+.add-buttons{
+
+    transition: 200ms ease;
+    @media(min-width: $screen-md){
+        display: flex;
+    }
+}
+
 .main-buttons{
     
     @media (min-width: $screen-xl){
